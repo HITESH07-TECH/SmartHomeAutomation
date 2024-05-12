@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-image: url('/static/bg1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 200px;
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            margin: 40px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(133, 108, 108, 0.1);
+        }
+
+        .box h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .box li {
+            margin-bottom: 10px;
+        }
+
+        .box a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Device Table -->
+    <div class="box">
+        <h2>Device</h2>
+        <ul>
+            <li><a href="/view_devices">View Devices</a></li>
+            <li><a href="/add_device">Add Device</a></li>
+            <!-- <li><a href="/update_device">Update</a></li>
+            <li><a href="/delete_device">Delete</a></li> -->
+        </ul>
+    </div>
+
+    <!-- User Table -->
+    <div class="box">
+        <h2>User</h2>
+        <ul>
+            <li><a href="/view_users">View Users</a></li>
+            <li><a href="/add_user">Add User</a></li>
+            <!-- <li><a href="/update_user">Update</a></li>
+            <li><a href="/delete_user">Delete</a></li>
+        </ul> -->
+    </div>
+
+    <!-- AutomationScenario Table -->
+    <div class="box">
+        <h2>AutomationScenario</h2>
+        <ul>
+            <li><a href="/view_automation_scenarios">View Automation Scenarios</a></li>
+            <li><a href="/add_automation_scenario">Add Automation Scenario</a></li>
+            <!-- <li><a href="/update_automation_scenario">Update</a></li>
+            <li><a href="/delete_automation_scenario">Delete</a></li> -->
+        </ul>
+    </div>
+
+    <!-- Sensor Table -->
+    <div class="box">
+        <h2>Sensor</h2>
+        <ul>
+            <li><a href="/view_sensors">View Sensors</a></li>
+            <li><a href="/add_sensor">Add Sensor</a></li>
+            <!-- <li><a href="/update_sensor">Update</a></li>
+            <li><a href="/delete_sensor">Delete</a></li>
+        </ul> -->
+    </div>
+
+    <!-- SecuritySystem Table -->
+    <div class="box">
+        <h2>SecuritySystem</h2>
+        <ul>
+            <li><a href="/view_security_systems">View Security Systems</a></li>
+            <li><a href="/add_security_system">Add Security System</a></li>
+            <!-- <li><a href="/update_security_system">Update</a></li>
+            <li><a href="/delete_security_system">Delete</a></li> -->
+        </ul>
+    </div>
+
+    <!-- EnergyManagement Table -->
+    <div class="box">
+        <h2>EnergyManagement</h2>
+        <ul>
+            <li><a href="/view_energy_managements">View Energy Managements</a></li>
+            <li><a href="/add_energy_management">Add Energy Management</a></li>
+            <!-- <li><a href="/update_energy_management">Update</a></li>
+            <li><a href="/delete_energy_management">Delete</a></li> -->
+        </ul>
+    </div>
+
+    <!-- NotificationLog Table -->
+    <div class="box">
+        <h2>NotificationLog</h2>
+        <ul>
+            <li><a href="/view_notification_logs">View Notification Logs</a></li>
+            <li><a href="/add_notification_log">Add Notification Log</a></li>
+            <!-- <li><a href="/update_notification_log">Update</a></li>
+            <li><a href="/delete_notification_log">Delete</a></li> -->
+        </ul>
+    </div>
+
+    <!-- ScheduledTasks Table -->
+    <div class="box">
+        <h2>ScheduledTasks</h2>
+        <ul>
+            <li><a href="/view_scheduled_tasks">View Scheduled Tasks</a></li>
+            <li><a href="/add_scheduled_task">Add Scheduled Task</a></li>
+            <!-- <li><a href="/update_scheduled_task">Update</a></li>
+            <li><a href="/delete_scheduled_task">Delete</a></li> -->
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

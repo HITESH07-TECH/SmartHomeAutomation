@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url('/static/bg1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif; /* Set a fallback font */
+        }
+
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            width: 320px;
+            text-align: center;
+        }
+
+        .login-box h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .login-box label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .login-box input[type="submit"] {
+            width: 107%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition for smooth hover effect */
+        }
+
+        .login-box input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker background color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h1>Login</h1>
+    
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+</body>
+</html>

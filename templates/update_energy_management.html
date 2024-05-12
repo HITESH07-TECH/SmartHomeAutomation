@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Energy Management</title>
+    <style>
+        body {
+            background-image: url('/static/bg1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center; /* Center-align the content */
+        }
+
+        form {
+            margin: 20px auto; /* Center the form */
+            width: 30%; /* Set form width */
+            background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+            padding: 20px; /* Add padding to the form */
+            border-radius: 10px; /* Add rounded corners to the form */
+        }
+
+        label {
+            display: inline-block; /* Make labels inline-block */
+            width: 150px; /* Set label width */
+            text-align: left; /* Left-align the label text */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 250px; /* Set input and select width */
+            padding: 5px; /* Add padding to input and select */
+            margin-bottom: 10px; /* Add margin to the bottom of input and select */
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px; /* Add padding to submit button */
+            background-color: #007BFF; /* Set button background color */
+            color: white; /* Set button text color */
+            border: none; /* Remove button border */
+            border-radius: 5px; /* Add rounded corners to button */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker background color on hover */
+        }
+        h1 {
+            margin-top: 150px; /* Add margin to the top of the heading */
+        }   
+        a {
+            margin-top: 20px; /* Add margin to the top of the anchor tag */
+            display: block; /* Make anchor tag a block element */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Update Energy Management</h1>
+
+<form method="post">
+    <label for="device_ids">Device IDs:</label>
+    <input type="text" name="device_ids" value="{{ management[1] }}" required><br><br>
+    
+    <label for="power_usage_threshold">Power Usage Threshold:</label>
+    <input type="text" name="power_usage_threshold" value="{{ management[2] }}" required><br><br>
+
+    <label for="energy_cost_per_unit">Energy Cost Per Unit:</label>
+    <input type="text" name="energy_cost_per_unit" value="{{ management[3] }}" required><br><br>
+
+    <label for="alerts_threshold">Alerts Threshold:</label>
+    <input type="text" name="alerts_threshold" value="{{ management[4] }}" required><br><br>
+    
+    <input type="submit" value="Update">
+</form>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

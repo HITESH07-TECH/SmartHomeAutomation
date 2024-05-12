@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Devices</title>
+    <style>
+        body {
+            background-image: url('/static/bg1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center; /* Center-align the content */
+        }
+
+        table {
+            margin: 20px auto; /* Center the table */
+            width: 80%; /* Set table width */
+            border-collapse: collapse; /* Collapse table borders */
+            background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+        }
+
+        th, td {
+            padding: 10px 15px; /* Add padding to table cells */
+            border: 1px solid black; /* Add borders to table cells */
+        }
+
+        h1 {
+            margin-top: 150px; /* Add margin to the top of the heading */
+        }
+
+        a {
+            margin: 0 10px; /* Add margin to anchor tags */
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Devices</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>DeviceID</th>
+            <th>DeviceName</th>
+            <th>DeviceType</th>
+            <th>Manufacturer</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for device in devices %}
+        <tr>
+            <td>{{ device[0] }}</td>
+            <td>{{ device[1] }}</td>
+            <td>{{ device[2] }}</td>
+            <td>{{ device[3] }}</td>
+            <td>{{ device[4] }}</td>
+            <td>
+                <a href="/update_device/{{ device[0] }}">Update</a>
+                <a href="/delete_device/{{ device[0] }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

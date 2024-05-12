@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Sensors</title>
+    <style>
+        body {
+            background-image: url('/static/bg1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center; /* Set a fallback font */
+        }
+
+        table {
+            margin: 20px auto; /* Center the table */
+            width: 80%; /* Set table width */
+            border-collapse: collapse; /* Collapse table borders */
+            background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+        }
+
+        th, td {
+            padding: 10px 15px; /* Add padding to table cells */
+            border: 1px solid black; /* Add borders to table cells */
+        }
+
+        h1 {
+            margin-top: 150px; /* Add margin to the bottom of the heading */
+        }
+
+        a {
+            margin: 0 10px; /* Add margin to anchor tags */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Sensors</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>SensorID</th>
+            <th>SensorType</th>
+            <th>DeviceID</th>
+            <th>SensorLocation</th>
+            <th>CurrentValue</th>
+            <th>LastUpdateDateTime</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sensor in sensors %}
+        <tr>
+            <td>{{ sensor[0] }}</td>
+            <td>{{ sensor[1] }}</td>
+            <td>{{ sensor[2] }}</td>
+            <td>{{ sensor[3] }}</td>
+            <td>{{ sensor[4] }}</td>
+            <td>{{ sensor[5] }}</td>
+            <td>
+                <a href="/update_sensor/{{ sensor[0] }}">Update</a>
+                <a href="/delete_sensor/{{ sensor[0] }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>
